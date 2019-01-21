@@ -6,15 +6,15 @@ using System.Threading.Tasks;
 
 namespace PR01
 {
-    class Soal04
+    class soal07
     {
-        public Soal04(int n)
+        public soal07(int n)
         {
             for (int b = 0; b < n; b++)
             {
                 for (int k = 0; k < n; k++)
                 {
-                    if (b == k || b + k == n - 1 || b == n / 2 || k == n / 2)
+                    if (b + k >= n - 1)
                     {
                         Console.Write("*  ");
                     }
@@ -23,7 +23,7 @@ namespace PR01
                         Console.Write("   ");
                     }
                 }
-                Console.Write("\n");
+                Console.WriteLine("\n");
             }
         }
     }
