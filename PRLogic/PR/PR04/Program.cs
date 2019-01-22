@@ -19,7 +19,7 @@ namespace PR04
             //Soal03 soal03 = new Soal03(n);
             //Soal02 soal02 = new Soal02(n);
             //Soal09 soal09 = new Soal09(n1, n2);
-            Soal10 soal10 = new Soal10(n1, n2);
+            //Soal10 soal10 = new Soal10(n1, n2);
             Console.Write("Press Any Button");
             Console.ReadKey();
         }
