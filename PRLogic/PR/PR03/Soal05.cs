@@ -19,7 +19,7 @@ namespace PR03
         }
         private void IsiArray()
         {
-            int[] Fibo = FunctionBase.Soal03(JumlahKolom);
+            int[] Fibo = FunctionBase.FiboBalik(JumlahKolom);
             for (int b = 0; b < JumlahBaris; b++)
             {
                 for (int k = 0; k < JumlahKolom; k++)

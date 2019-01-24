@@ -42,6 +42,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="LatihanKoding04.cs" />
+    <Compile Include="LatihanKoding05.cs" />
+    <Compile Include="LatihanKoding06.cs" />
+    <Compile Include="LatihanKoding10.cs" />
+    <Compile Include="LatihanKoding11.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Soal01.cs" />

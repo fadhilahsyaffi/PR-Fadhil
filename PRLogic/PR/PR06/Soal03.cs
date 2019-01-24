@@ -5,14 +5,14 @@ using System.Text;
 using System.Threading.Tasks;
 using PR_Base;
 
-namespace PR05
+namespace PR06
 {
-    class Soal10 : LogicBase
+    class Soal03 : LogicBase
     {
-        public Soal10(int n)
+        public Soal03(int n)
         {
-            JumlahBaris = (n * n + n) / 2;
-            JumlahKolom = n * 2 - 1;
+            JumlahBaris = n * n;
+            JumlahKolom = (n * 2 - 1) * 2;
             Array2D = new string[JumlahBaris, JumlahKolom];
             IsiArray(n);
             FunctionBase.CetakArray(Array2D);
@@ -20,39 +20,36 @@ namespace PR05
 
         private void IsiArray(int n)
         {
+            int[] Fibo = FunctionBase.Fibo(JumlahKolom * JumlahKolom);
             for (int bangun = 0; bangun < n; bangun++)
             {
-                int[] Fibo = FunctionBase.Fibo(JumlahKolom * n);
+                //Start End
+                int StarBar = n * bangun;
+                int StarKol = bangun % 2 * (n * 2 - 1);
+                int EndBar = StarBar + (n - 1);
+                int EndKol = StarKol + 2 * (n - 1);
+
+                // Index Fibo
                 int index = 0;
                 int ganjil = 1;
-                //Starting point
-                int StarBar = (bangun * bangun + bangun) / 2;
-                int StarKol = (n * 2 - 1) / 2 - bangun;
-
-                //Ending Point
-                int EndBar = StarBar + bangun;
-                int EndKol = StarKol + (bangun * 2);
-
-
                 for (int b = StarBar; b <= EndBar; b++)
                 {
                     for (int k = StarKol; k <= EndKol; k++)
                     {
-                        if (b - k >= EndBar - EndKol && b + k >= EndBar + StarKol)
+                        if (b + k >= StarKol + EndBar && k - b <= EndKol - EndBar)
                         {
                             if (bangun % 2 == 0)
                             {
-                                Array2D[b, k] = ganjil.ToString();
-                                ganjil += 2;
+                                //if (b + k >= StarKol + EndBar && k - b <= EndKol - EndBar)
+                                Array2D[b, k] = Fibo[index++].ToString();
                             }
                             else
-                                Array2D[b, k] = Fibo[index++].ToString();
+                                Array2D[b, k] = ganjil.ToString();
+                            ganjil += 2;
                         }
-
                     }
                 }
             }
         }
-
     }
 }

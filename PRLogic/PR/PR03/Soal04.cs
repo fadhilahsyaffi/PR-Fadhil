@@ -22,7 +22,7 @@ namespace PR03
 
             for (int b = 0; b < JumlahBaris; b++)
             {
-                int[] Tribo = FunctionBase.Soal04(JumlahKolom);
+                int[] Tribo = FunctionBase.TriboBalik(JumlahKolom);
                 for (int k = 0; k < JumlahKolom; k++)
                 {
                     Array2D[0, k] = Tribo[k].ToString();

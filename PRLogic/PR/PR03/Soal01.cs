@@ -24,7 +24,7 @@ namespace PR03
             //Console.WriteLine("Nilai Jumlah Kolom: {0}", JumlahKolom);
             //Console.WriteLine("Buffer Array: {0}", jumlahBaris * JumlahKolom);
 
-            int[] Fibo = FunctionBase.Soal01(JumlahKolom);
+            int[] Fibo = FunctionBase.Fibo(JumlahKolom);
             for (int b = 0; b < JumlahBaris; b++)
             {
                 for (int k = 0; k < JumlahKolom; k++)

@@ -24,7 +24,12 @@ namespace PR05
             //Soal09 soal09 = new Soal09(n);
             //Soal10 soal10 = new Soal10(n);
             //SoalPR01 soalpr01 = new SoalPR01(n);
-            SoalPR02 soalpr02 = new SoalPR02(n);
+            //SoalPR02 soalpr02 = new SoalPR02(n);
+            //LatihanSoal04 latihansoal04 = new LatihanSoal04(n);
+            //LatihanSoal05 latihansoal05 = new LatihanSoal05(n);
+            //LatihanKoding06 latihansoal06 = new LatihanKoding06(n);
+            //LatihanKoding10 latihansoal10 = new LatihanKoding10(n);
+            LatihanKoding11 latihankoding11 = new LatihanKoding11(n);
             Console.Write("Press Any Key");
             Console.ReadKey();
         }

@@ -20,7 +20,7 @@ namespace PR05
 
         private void isiArray(int n)
         {
-            int[] fibo = FunctionBase.Soal01(n * n);
+            int[] fibo = FunctionBase.Fibo(n * n);
             for (int bangun = 0; bangun < n; bangun++)
             {
                 int StarBar = (bangun * bangun + bangun) / 2 + (n - bangun) * bangun;

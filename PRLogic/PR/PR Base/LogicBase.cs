@@ -26,7 +26,7 @@ namespace PR_Base
                 Console.WriteLine("\n");
             }
         }
-        public static int[] Soal01(int n)
+        public static int[] Fibo(int n)
         {
             int[] result = new int[n];
             for (int pos = 0; pos < n; pos++)
@@ -38,7 +38,7 @@ namespace PR_Base
             }
             return result;
         }
-        public static int[] Soal02(int n)
+        public static int[] Tribo(int n)
         {
             int[] result = new int[n];
             for (int pos = 0; pos < n; pos++)
@@ -50,7 +50,19 @@ namespace PR_Base
             }
             return result;
         }
-        public static int[] Soal03(int n)
+        public static int[] Kribo(int n)
+        {
+            int[] result = new int[n];
+            for (int pos = 0; pos < n; pos++)
+            {
+                if (pos <= 3)
+                    result[pos] = 1;
+                else
+                    result[pos] = result[pos - 1] + result[pos - 2] + result[pos - 3] + result[pos - 4];
+            }
+            return result;
+        }
+        public static int[] FiboBalik(int n)
         {
             int[] result = new int[n];
             for (int pos = 0; pos < n; pos++)
@@ -65,12 +77,26 @@ namespace PR_Base
             return result;
         }
 
-        public static int[] Soal04(int n)
+        public static int[] TriboBalik(int n)
         {
             int[] result = new int[n];
             for (int pos = 0; pos < n; pos++)
             {
                 if (pos <= 2)
+                    result[pos] = 1;
+                else if (pos <= n / 2)
+                    result[pos] = result[pos - 1] + result[pos - 2];
+                else
+                    result[pos] = result[n - 1 - pos];
+            }
+            return result;
+        }
+        public static int[] KriboBalik(int n)
+        {
+            int[] result = new int[n];
+            for (int pos = 0; pos < n; pos++)
+            {
+                if (pos <= 3)
                     result[pos] = 1;
                 else if (pos <= n / 2)
                     result[pos] = result[pos - 1] + result[pos - 2];

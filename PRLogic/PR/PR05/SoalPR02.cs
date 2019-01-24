@@ -20,7 +20,7 @@ namespace PR05
 
         private void isiArray(int n)
         {
-            int[] tribo = FunctionBase.Soal02(n * n);
+            int[] tribo = FunctionBase.Tribo(n * n);
             for (int bgn = 0; bgn < n; bgn++)
             {
                 int stBrs = (bgn * bgn + bgn) / 2 + (n - bgn) * bgn;
