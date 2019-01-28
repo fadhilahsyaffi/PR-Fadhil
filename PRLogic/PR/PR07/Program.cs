@@ -4,13 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PR06
+namespace PR07
 {
     class Program
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("----- Logic 5 -----");
+            Console.WriteLine("----- Logic 7 -----");
             Console.Write("Masukkan Nilai n: ");
             int n = int.Parse(Console.ReadLine());
             //Soal01 soal01 = new Soal01(n);
@@ -20,11 +20,11 @@ namespace PR06
             //Soal05 soal05 = new Soal05(n);
             //Soal06 soal06 = new Soal06(n);
             //Soal07 soal07 = new Soal07(n);
-            Soal08 soal08 = new Soal08(n);
+            //Soal08 soal08 = new Soal08(n);
             //Soal09 soal09 = new Soal09(n);
             //Soal10 soal10 = new Soal10(n);
-            //PR01 pr01 = new PR01(n);
-            //PR02 pr02 = new PR02(n);
+            PR03 pr03 = new PR03(n);
+            //PostTest posttest = new PostTest(n);
             Console.Write("Press Any Key");
             Console.ReadKey();
         }

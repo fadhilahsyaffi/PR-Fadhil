@@ -5,11 +5,11 @@ using System.Text;
 using System.Threading.Tasks;
 using PR_Base;
 
-namespace PR06
+namespace PR07
 {
-    class Soal06 : LogicBase
+    class Soal10 : LogicBase
     {
-        public Soal06(int n)
+        public Soal10(int n)
         {
             JumlahBaris = n * n;
             JumlahKolom = n * n;
@@ -20,27 +20,27 @@ namespace PR06
 
         private void IsiArray(int n)
         {
+            int angka = 1;
             for (int bb = 0; bb < n; bb++)
             {
                 for (int bk = 0; bk < n; bk++)
                 {
-                    if (bb == bk)
+                    if (bb == 0 || bk == 0 || bb == n - 1 || bk == n - 1)
                     {
                         int StarBar = bb * n;
                         int StarKol = bk * n;
                         int EndBar = StarBar + n - 1;
                         int EndKol = StarKol + n - 1;
+
                         for (int b = StarBar; b <= EndBar; b++)
                         {
                             for (int k = StarKol; k <= EndKol; k++)
                             {
-                                if ((b - StarBar) + (k - StarKol) >= n / 2 && (k - StarKol) - (b - StarBar) <= n / 2 && b - StarBar <= n / 2)
-                                {
-                                    Array2D[b, k] = "*";
-                                    Array2D[EndBar - (b - StarBar), k] = "*";
-                                }
+                                if (b - StarBar == k - StarKol || b == EndBar || k == StarKol)
+                                    Array2D[b, k] = angka.ToString();
                             }
                         }
+                        angka++;
                     }
                 }
             }

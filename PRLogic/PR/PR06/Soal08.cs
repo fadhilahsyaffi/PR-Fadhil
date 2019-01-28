@@ -20,7 +20,7 @@ namespace PR06
 
         private void IsiArray(int n)
         {
-            int deret = (n + 1) / 2;
+            int deret = (n + 1) / 2; // 3
             for (int bb = 0; bb < n; bb++)
             {
                 for (int bk = 0; bk < n; bk++)
@@ -38,16 +38,18 @@ namespace PR06
                             {
                                 if ((b - StarBar) + (k - StarKol) >= n / 2 && (k - StarKol) - (b - StarBar) <= n / 2 && b - StarBar <= n / 2)
                                 {
+                                    //memberi nilai k kurang dari 1/2 end kolom = berkurang
                                     if (k < (StarKol + EndKol) / 2)
                                     {
                                         Array2D[b, k] = angka.ToString();
                                         Array2D[EndBar - b + StarBar, k] = angka.ToString();
                                         angka--;
                                     }
+                                    //memberi nilai k lebih dari 1/2 end kolom = bertambah
                                     else
                                     {
-                                        Array2D[b,k] = angka.ToString();
-                                        Array2D[EndBar- b + StarBar,k]= angka.ToString();
+                                        Array2D[b, k] = angka.ToString();
+                                        Array2D[EndBar - b + StarBar, k] = angka.ToString();
                                         angka++;
                                     }
                                 }
@@ -55,7 +57,7 @@ namespace PR06
                         }
                     }
                 }
-                    deret = deret + ((n+1)/2);
+                deret = deret + ((n + 1) / 2);
             }
         }
     }
